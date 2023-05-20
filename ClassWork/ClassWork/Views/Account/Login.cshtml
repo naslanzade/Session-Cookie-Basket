@@ -1,0 +1,22 @@
+﻿@model LoginVM
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="container">
+    <div class="text-danger">@ViewBag.error</div>
+    <h3 class="text-center">Login</h3>
+    <form method="post" asp-action="Login">
+        <div class="form-group">
+            <input  class="form-control" placeholder="Enter email" asp-for="Email">
+
+        </div>
+        <div class="form-group mt-2">
+            <input type="password" class="form-control" placeholder="Password" asp-for="Password">
+        </div>
+       
+        <button type="submit" class="btn btn-primary mt-3">Login</button>
+    </form>
+</div>
